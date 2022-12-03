@@ -1,5 +1,5 @@
 {
-  "name": "@simplerpc/server",
+  "name": "simplerpc-server",
   "version": "1.0.0",
   "description": "server library for simplerpc - RPC API framework",
   "main": "index.js",
