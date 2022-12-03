@@ -1,6 +1,6 @@
 # SimpleRPC - Server
 
-`npm install simplerpc-server`
+`npm install @alexmerced/simplerpc-server`
 
 The SimpleRPC framework is a framework for creating very simple lightweight RPC APIs for use with any backend or frontend framework with a `redux/useReducer` like API.
 
@@ -17,7 +17,7 @@ The client function then can be called like so:
 First we create an handler
 
 ```js
-const createHandler = require("simplerpc-server")
+const createHandler = require("@alexmerced/simplerpc-server")
 
 // server actions
 const actions = {
