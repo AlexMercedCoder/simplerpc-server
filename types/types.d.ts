@@ -1,22 +1,27 @@
 interface UnknownObjectShape {
-    [key: string]: any
+  [key: string]: any;
 }
 
 interface ActionArg {
-    type: string,
-    payload: UnknownObjectShape
+  type: string;
+  payload: UnknownObjectShape;
 }
 
-type Action = (action: ActionArg) => any
+type Action = (action: ActionArg) => any;
 
 interface SimpleRPCConfig {
-    actions: {
-        [key: string]: Action
-    },
-    context: UnknownObjectShape
+  actions: {
+    [key: string]: Action;
+  };
+  context: UnknownObjectShape;
 }
 
+interface SimpleRPCResponse {
+  result: any;
+}
 
-declare function createHandler(config: SimpleRPCConfig)
+type SimpleRPCHandler = (body: UnknownObjectShape) => SimpleRPCResponse;
 
-export default createHandler
+declare function createHandler(config: SimpleRPCConfig): SimpleRPCHandler;
+
+export default createHandler;
