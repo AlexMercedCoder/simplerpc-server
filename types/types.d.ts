@@ -9,10 +9,12 @@ export interface ActionArg {
 
 export type Action = (action: ActionArg) => any;
 
+export interface ActionCollection {
+  [key: string]: Action;
+}
+
 export interface SimpleRPCConfig {
-  actions: {
-    [key: string]: Action;
-  };
+  actions: ActionCollection
   context: UnknownObjectShape;
 }
 
