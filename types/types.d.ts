@@ -3,8 +3,8 @@ export interface UnknownObjectShape {
 }
 
 export interface ActionArg {
-  type: string;
-  payload: UnknownObjectShape;
+  payload: UnknownObjectShape,
+  context: UnknownObjectShape
 }
 
 export type Action = (action: ActionArg) => any;
