@@ -16,11 +16,7 @@ interface SimpleRPCConfig {
   context: UnknownObjectShape;
 }
 
-interface SimpleRPCResponse {
-  result: any;
-}
-
-type SimpleRPCHandler = (body: UnknownObjectShape) => SimpleRPCResponse;
+type SimpleRPCHandler = (body: UnknownObjectShape) => Any;
 
 declare function createHandler(config: SimpleRPCConfig): SimpleRPCHandler;
 

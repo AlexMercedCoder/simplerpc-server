@@ -1,6 +1,6 @@
 {
   "name": "@alexmerced/simplerpc-server",
-  "version": "1.1.01",
+  "version": "1.1.02",
   "description": "server library for simplerpc - RPC API framework",
   "main": "index.js",
   "types": "./types/types.d.ts",
