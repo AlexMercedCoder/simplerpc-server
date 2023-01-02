@@ -2,12 +2,15 @@ export interface UnknownObjectShape {
   [key: string]: any;
 }
 
-export interface ActionArg {
-  payload: UnknownObjectShape,
-  context: UnknownObjectShape
+export interface ActionPayload {
+  [key: string]: any
 }
 
-export type Action = (action: ActionArg) => any;
+export interface ActionContext {
+  [key: string]: any
+}
+
+export type Action = (payload: ActionPayload, context: ActionContext) => any;
 
 export interface ActionCollection {
   [key: string]: Action;
